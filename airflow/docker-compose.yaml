@@ -1,0 +1,18 @@
+version: '3.6'
+
+services:
+  airflow:
+    build: .
+    container_name: airflow
+    ports:
+      - "8089:8089"
+    environment:
+      - ADMIN_USERNAME=admin
+      - ADMIN_FIRST_NAME=admin
+      - ADMIN_LAST_NAME=user
+      - ADMIN_EMAIL=admin@something.com
+      - ADMIN_PWD=admin
+      - SENDER_ADDR=freelance.arnav@gmail.com
+      - SENDER_PWD=TQr431234
+      - EMAILS=['arnavkohli@gmail.com']
+      - MONGO_CONN=mongodb+srv://arnav:t1WEjJ70xQg7ivWY@my-cluster.toozw.mongodb.net/myFirstDatabase?retryWrites=true&w=majority

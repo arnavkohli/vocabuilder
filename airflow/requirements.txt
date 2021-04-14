@@ -1,0 +1,5 @@
+apache-airflow==2.0.0
+requests
+bs4
+pymongo
+apache-airflow
