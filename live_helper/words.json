@@ -1,0 +1,27 @@
+[
+    {
+        "word": "alleviate",
+        "meaning": "to make something bad such as pain or problems less severe",
+        "example": "The drugs did nothing to alleviate her pain/suffering.",
+        "synonyms": []
+    },
+    {
+        "word": "delirious",
+        "meaning": "unable to think or speak clearly because of fever or mental confusion",
+        "example": "She had a high temperature and was delirious.",
+        "synonyms": []
+    },
+    {
+        "word": "impervious",
+        "meaning": "geology, engineering\n\u00a0 specialized not allowing liquid to go through",
+        "example": "How does glue bond with impervious substances like glass and metal?",
+        "synonyms": [
+            "impenetrable",
+            "impermeableCompare",
+            "waterproof adjective",
+            "watertight (NO WATER)",
+            "weatherproofOpposite",
+            "permeable formal"
+        ]
+    }
+]

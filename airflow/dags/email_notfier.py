@@ -87,12 +87,16 @@ def send_email(word, emails):
 	    s.send_message(msg)
 	    
 	    del msg
+	    print (f"[DAG] Sent to {email}")
 
 
-def get_random_word(collection):
+def get_random_word(collection, should_be_high_frequency=True):
 	count = collection.estimated_document_count()
 	randomIndex = random.randint(0, count)
-	words = [x for x in collection.find()]
+	if should_be_high_frequency:
+		words = [x for x in collection.find({"is_high_frequency" : True})]
+	else:
+		words = [x for x in collection.find()]
 	return words[randomIndex]
 
 
@@ -101,7 +105,7 @@ def notify_via_email():
 	db = client.vocabuilder
 	new_words_table = db.new_magoosh_words
 	old_words_table = db.old_magoosh_words
-	random_word = get_random_word(new_words_table)
+	random_word = get_random_word(new_words_table, should_be_high_frequency=True)
 	new_words_table.remove(random_word)
 	random_word['last_sent'] = datetime.now()
 	old_words_table.insert(random_word)
