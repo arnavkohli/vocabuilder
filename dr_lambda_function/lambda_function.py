@@ -1,11 +1,11 @@
 import os
 import json
 import boto3
-from helpers import *
+from slaves import *
 
 def lambda_handler(event, context):
 	try:
-	    notify_via_email()
+	    send_new_word_via_email()
 	    return {
 	        'statusCode': 200,
 	        'body': json.dumps('Daily word sent.')
