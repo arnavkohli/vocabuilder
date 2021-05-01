@@ -8,7 +8,11 @@ jobs:
   build:
 
     runs-on: ubuntu-latest
-
+    env:
+      MONGO_CONN: ${{ secrets.MONGO_CONN }}
+      SENDER_ADDR: ${{ secrets.SENDER_ADDR }}
+      SENDER_PWD: ${{ secrets.SENDER_PWD }}
+      TESTER_EMAIL: ${{ secrets.TESTER_EMAIL }}
     steps:
     - uses: actions/checkout@v2
       with:
