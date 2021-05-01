@@ -9,7 +9,6 @@ from email.mime.multipart import MIMEMultipart
 from email.mime.text import MIMEText
 
 # Lambda Daily Run Workers
-
 def read_template(template_path: str) -> Template:
     '''
         Given the file name, looks for the HTML template
