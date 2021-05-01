@@ -70,7 +70,7 @@ def get_random_word(collection, should_be_high_frequency=True):
 		words = [x for x in collection.find()]
 	randomIndex = random.randint(0, len(words))
 	word = words[randomIndex]
-	print (f"[VOCABUILDER] Found `{word.get("word")}`")
+	print (f"[VOCABUILDER] Found `{word.get('word')}`")
 	return word
 
 @test_and_time
