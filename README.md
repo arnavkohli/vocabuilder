@@ -27,12 +27,16 @@ COLLECTION = "magoosh_words"                      # Collection name
 FP_TO_RAW_DATA = "./static/magoosh_raw_list.txt"  # File path to raw list
 ```
 
-### Run the ETL
+#### Run the ETL
 ```
 python etl_run.py
 ```
 
 ### Get random words using email!
+
+ <p>
+   Turn <a href="https://myaccount.google.com/lesssecureapps">Allow less secure apps ON</a> for the script to be able to send emails on your behalf!
+ </p>
 
 #### Inside _send_random_word_via_email.py_ update variables as per your setup
 ```
