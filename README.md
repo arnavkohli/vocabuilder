@@ -2,7 +2,7 @@
 
 <p align="center">
   <img src="https://github.com/arnavkohli/vocabuilder/actions/workflows/vocabuilder-ci.yml/badge.svg" />
-  <img src="https://visitor-badge.laobi.icu/badge?page_id=vocabuilder" />
+  <img src="https://visitor-badge.laobi.icu/badge?page_id=arnavkohli.vocabuilder" />
 </p>
 
 <p align="center">
@@ -27,12 +27,16 @@ COLLECTION = "magoosh_words"                      # Collection name
 FP_TO_RAW_DATA = "./static/magoosh_raw_list.txt"  # File path to raw list
 ```
 
-### Run the ETL
+#### Run the ETL
 ```
 python etl_run.py
 ```
 
 ### Get random words using email!
+
+ <p>
+   Turn <a href="https://myaccount.google.com/lesssecureapps">Allow less secure apps ON</a> for the script to be able to send emails on your behalf!
+ </p>
 
 #### Inside _send_random_word_via_email.py_ update variables as per your setup
 ```
@@ -51,4 +55,4 @@ FP_TO_EMAIL_TEMPLATE = "./static/email.html"  # Path to email template
 python send_random_word_via_email.py
 ```
 
-![sample](https://github.com/arnavkohli/vocabuilder/blob/develop/screenshot.png)
+![sample](https://github.com/arnavkohli/vocabuilder/blob/master/screenshot.png)

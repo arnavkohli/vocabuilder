@@ -2,21 +2,15 @@ name: Vocabuilder CI
 
 on:
   push:
-    branches: [ master ]
+    branches: [ develop ]
 
 jobs:
   build:
 
     runs-on: ubuntu-latest
-    env:
-      MONGO_CONN: ${{ secrets.MONGO_CONN }}
-      SENDER_ADDR: ${{ secrets.SENDER_ADDR }}
-      SENDER_PWD: ${{ secrets.SENDER_PWD }}
-      TESTER_EMAIL: ${{ secrets.TESTER_EMAIL }}
+
     steps:
     - uses: actions/checkout@v2
-      with:
-        ref: master
     - name: Set up Python 3.8
       uses: actions/setup-python@v2
       with:
@@ -34,4 +28,4 @@ jobs:
         flake8 . --count --exit-zero --max-complexity=10 --max-line-length=127 --statistics
     - name: Test with pytest
       run: |
-        pytest vocabuilder/tests.py
+        pytest
