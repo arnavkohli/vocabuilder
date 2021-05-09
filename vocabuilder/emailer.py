@@ -17,9 +17,9 @@ def send_random_word_via_email(mongo_conn_url: str, database: str, \
 	
 	random_word = get_random_word(new_words_table, should_be_high_frequency=should_be_high_frequency)
 	
-	#new_words_table.remove(random_word)
-	#random_word['last_sent'] = datetime.now()
-	#old_words_table.insert(random_word)
+	new_words_table.remove(random_word)
+	random_word['last_sent'] = datetime.now()
+	old_words_table.insert(random_word)
 
 	send_email(
 		word_data=random_word, 
