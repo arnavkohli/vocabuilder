@@ -1,7 +1,7 @@
 import os
 import pytest
 import pymongo
-from workers import send_email, get_random_word
+from .workers import send_email, get_random_word
 
 @pytest.fixture
 def dummy_word_data():
