@@ -51,4 +51,4 @@ FP_TO_EMAIL_TEMPLATE = "./static/email.html"  # Path to email template
 python send_random_word_via_email.py
 ```
 
-![sample](https://github.com/arnavkohli/vocabuilder/screenshot.png)
+![sample](https://github.com/arnavkohli/vocabuilder/blob/develop/screenshot.png)
