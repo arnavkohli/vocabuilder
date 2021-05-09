@@ -1,4 +1,5 @@
 import pymongo
+from datetime import datetime
 from .workers import get_random_word, send_email
 
 def send_random_word_via_email(mongo_conn_url: str, database: str, \
