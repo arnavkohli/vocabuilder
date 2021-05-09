@@ -1,6 +1,6 @@
 import os
 import pymongo
-from workers import extract_to_dict, get_all_words
+from .workers import extract_to_dict, get_all_words
 
 def run(mongo_conn_url: str, database: str, collection: str, fp: str):
 	client = pymongo.MongoClient(mongo_conn_url)
